@@ -34,7 +34,7 @@ const render = teamMembers => {
             </li>
             <li class='list-group-item'>E-mail: <a href="mailto:${intern.getEmail()}">${intern.getEmail()}</a>
             </li>
-            <li class='list-group-item'>Studying at:
+            <li class='list-group-item'>Studying at: ${intern.getSchool()}
             </li>
             </ul>
         </div>
@@ -55,7 +55,7 @@ const render = teamMembers => {
             </li>
             <li class='list-group-item'>E-mail: <a href="mailto:${engineer.getEmail()}">${engineer.getEmail()}</a>
             </li>
-            <li class='list-group-item'>GitHub:
+            <li class='list-group-item'>GitHub: ${engineer.getGithub()}
             </li>
             </ul>
         </div>
