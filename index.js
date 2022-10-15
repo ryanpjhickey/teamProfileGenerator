@@ -211,4 +211,4 @@ function applicationMenu() {
     createManager();
 }
 
-appMenu();
+applicationMenu();

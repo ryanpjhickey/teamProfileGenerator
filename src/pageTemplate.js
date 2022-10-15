@@ -67,5 +67,28 @@ const generateTeam = team => {
 
 module.exports = team => {
     return `
-    `
+    <!DOCTYPE html>
+    <html lang='en'>
+    
+    <head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/boostrap.min.css"
+        integrity="sha384-gg0yR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1t" crossorigin=anonymous">
+        </head>
+    <body>
+    <div class="container-fluid">
+    <div class="row">
+    <div class="col-12 jumbotron mb-3 team-heading">
+    <h1 class="text-center">My Team</h1>
+    </div>
+    </div>
+    </div>
+    <div class="container">
+    <div class="row>
+    <div class="team-area col-12 d-flex justify-content-center">${generateTeam(team)}
+    </div>
+    </div>
+    </div>
+    </body>
+    </html>
+        `
 }
