@@ -11,7 +11,7 @@ const outputPath = path.join(OUTPUT_DIR, "team.html")
 
 const render = require("./src/pageTemplate.js")
 
-const teamMember = [];
+const teamMembers = [];
 const idArray = [];
 
 function applicationMenu() {
