@@ -67,6 +67,7 @@ const generateTeam = team => {
     </div>
     `
     }
+
 }
 
 module.exports = team => {
@@ -93,6 +94,11 @@ module.exports = team => {
     </div>
     </div>
     </body>
+    <script src="../lib/Employee.js"></script>
+    <script src="../lib/Engineer.js"></script>
+    <script src="../lib/Intern.js"></script>
+    <script src="../lib/Manager.js"></script>
+    <script src="../index.js"></script>
     </html>
         `
 }
