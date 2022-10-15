@@ -13,7 +13,7 @@ const render = teamMembers => {
             </li>
             <li class='list-group-item'>E-mail: <a href="mailto:${manager.getEmail()}">${manager.getEmail()}</a>
             </li>
-            <li class='list-group-item'>Office Number: ${manager.getOfficeNumber}
+            <li class='list-group-item'>Office Number: ${manager.getOfficeNumber()}
             </li>
             </ul>
         </div>
