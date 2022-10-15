@@ -5,6 +5,7 @@ const fs = require("fs")
 const Manager = require("./lib/Manager")
 const Intern = require("./lib/Intern")
 const Engineer = require("./lib/Engineer")
+const team = require("./src/pageTemplate")
 
 const OUTPUT_DIR = path.resolve(__dirname, "output")
 const outputPath = path.join(OUTPUT_DIR, "team.html")
@@ -86,9 +87,10 @@ function applicationMenu() {
             switch (userChoice.memberChoice) {
                 case "Engineer":
                     addEngineer();
-                    break
+                    break;
                 case "Intern":
                     addIntern();
+                    break;
                 default:
                     buildTeam();
             }

@@ -1,9 +1,4 @@
-// const Employee = require("../lib/Employee")
-// const Manager = require("../lib/Manager")
-// const Engineer = require("../lib/Engineer")
-// const Intern = require("../lib/Intern")
-
-const generateTeam = team => {
+const render = teamMembers => {
 
     const generateManager = manager => {
         return `
@@ -18,7 +13,7 @@ const generateTeam = team => {
             </li>
             <li class='list-group-item'>E-mail: <a href="mailto:${manager.getEmail()}">${manager.getEmail()}</a>
             </li>
-            <li class='list-group-item'>Office Number: ${manager.getOfficeNumber()}
+            <li class='list-group-item'>Office Number: ${manager.getOfficeNumber}
             </li>
             </ul>
         </div>
@@ -39,7 +34,7 @@ const generateTeam = team => {
             </li>
             <li class='list-group-item'>E-mail: <a href="mailto:${intern.getEmail()}">${intern.getEmail()}</a>
             </li>
-            <li class='list-group-item'>Studying at: ${intern.getSchool()}
+            <li class='list-group-item'>Studying at:
             </li>
             </ul>
         </div>
@@ -60,7 +55,7 @@ const generateTeam = team => {
             </li>
             <li class='list-group-item'>E-mail: <a href="mailto:${engineer.getEmail()}">${engineer.getEmail()}</a>
             </li>
-            <li class='list-group-item'>GitHub: ${engineer.getGithub()}
+            <li class='list-group-item'>GitHub:
             </li>
             </ul>
         </div>
@@ -68,9 +63,28 @@ const generateTeam = team => {
     `
     }
 
-}
+    const html = [];
 
-module.exports = team => {
+    html.push(teamMembers
+        .filter(employee => employee.getRole() === "Manager")
+        .map(manager => generateManager(manager))
+    );
+    html.push(teamMembers
+        .filter(employee => employee.getRole() === "Engineer")
+        .map(engineer => generateEngineer(engineer))
+        .join("")
+    );
+    html.push(teamMembers
+        .filter(employee => employee.getRole() === "Intern")
+        .map(intern => generateIntern(intern))
+        .join("")
+    );
+
+    return html.join("")
+
+};
+
+module.exports = teamMembers => {
     return `
     <!DOCTYPE html>
     <html lang='en'>
@@ -89,7 +103,7 @@ module.exports = team => {
     </div>
     <div class="container">
     <div class="row">
-    <div class="team-area col-12 d-flex justify-content-center">${generateTeam(team)}
+    <div class="team-area col-12 d-flex justify-content-center">${render(teamMembers)}
     </div>
     </div>
     </div>
