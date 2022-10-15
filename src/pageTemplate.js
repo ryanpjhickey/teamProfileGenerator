@@ -1,5 +1,7 @@
-const generateManager = manager => {
-    return `
+const generateTeam = team => {
+
+    const generateManager = manager => {
+        return `
     <div class='card employee-card'>
     <div class='card-header'>
         <h2 class='card-title'>${manager.getName()}</h2>
@@ -17,10 +19,10 @@ const generateManager = manager => {
         </div>
     </div>
     `
-}
+    }
 
-const generateIntern = intern => {
-    return `
+    const generateIntern = intern => {
+        return `
     <div class='card employee-card'>
     <div class='card-header'>
         <h2 class='card-title'>${intern.getName()}</h2>
@@ -38,10 +40,10 @@ const generateIntern = intern => {
         </div>
     </div>
     `
-}
+    }
 
-const generateEngineer = engineer => {
-    return `
+    const generateEngineer = engineer => {
+        return `
     <div class='card employee-card'>
     <div class='card-header'>
         <h2 class='card-title'>${engineer.getName()}</h2>
@@ -58,5 +60,12 @@ const generateEngineer = engineer => {
             </ul>
         </div>
     </div>
+    `
+    }
+
+}
+
+module.exports = team => {
+    return `
     `
 }
