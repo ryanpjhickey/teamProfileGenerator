@@ -42,7 +42,7 @@ function applicationMenu() {
             },
             {
                 type: "input",
-                name: "managerId",
+                name: "managerEmail",
                 message: "What is the manager's email?",
                 validate: answer => {
                     if (answer !== '') {
@@ -53,7 +53,7 @@ function applicationMenu() {
             },
             {
                 type: "input",
-                name: "managerId",
+                name: "managerOfficeNumber",
                 message: "What is the manager's office number?",
                 validate: answer => {
                     if (answer !== '') {
@@ -120,7 +120,7 @@ function applicationMenu() {
             },
             {
                 type: "input",
-                name: "engineerId",
+                name: "engineerEmail",
                 message: "What is the engineer's email?",
                 validate: answer => {
                     if (answer !== '') {
@@ -131,7 +131,7 @@ function applicationMenu() {
             },
             {
                 type: "input",
-                name: "engineerId",
+                name: "engineerGithub",
                 message: "What is the engineer's Github username?",
                 validate: answer => {
                     if (answer !== '') {
@@ -173,7 +173,7 @@ function applicationMenu() {
             },
             {
                 type: "input",
-                name: "internId",
+                name: "internEmail",
                 message: "What is the intern's email?",
                 validate: answer => {
                     if (answer !== '') {
@@ -184,7 +184,7 @@ function applicationMenu() {
             },
             {
                 type: "input",
-                name: "internId",
+                name: "internSchool",
                 message: "What is the name of the intern's school?",
                 validate: answer => {
                     if (answer !== '') {
